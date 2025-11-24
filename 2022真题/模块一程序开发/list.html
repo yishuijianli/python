@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>员工列表</title>
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>员工管理系统</h1>
+            <div class="user-info">
+                <span>欢迎，<span id="username"></span></span>
+                <button onclick="location.href='index.html'" class="back-btn">返回首页</button>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <div class="table-container">
+                <h2>员工列表</h2>
+                <table id="employeeTable">
+                    <thead>
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>年龄</th>
+                            <th>部门</th>
+                            <th>职位</th>
+                            <th>联系电话</th>
+                            <th>电子邮箱</th>
+                            <th>入职日期</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeeTableBody">
+                        <tr>
+                            <td colspan="9" style="text-align: center;">加载中...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    
+    <script src="list.js"></script>
+</body>
+</html>

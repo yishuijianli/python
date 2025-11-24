@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改员工信息</title>
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>员工管理系统</h1>
+            <div class="user-info">
+                <span>欢迎，<span id="username"></span></span>
+                <button onclick="location.href='index.html'" class="back-btn">返回首页</button>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <div class="form-container">
+                <h2>修改员工信息</h2>
+                
+                <!-- 员工选择区域 -->
+                <div class="select-section">
+                    <label for="employeeSelect">选择要修改的员工：</label>
+                    <select id="employeeSelect" class="employee-select">
+                        <option value="">请选择员工</option>
+                    </select>
+                </div>
+                
+                <!-- 员工信息表单 -->
+                <form id="updateEmployeeForm" style="display: none;">
+                    <input type="hidden" id="employeeId" name="id">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">姓名 <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">性别 <span class="required">*</span></label>
+                            <select id="gender" name="gender" required>
+                                <option value="">请选择</option>
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">年龄 <span class="required">*</span></label>
+                            <input type="number" id="age" name="age" min="18" max="65" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="department">部门 <span class="required">*</span></label>
+                            <input type="text" id="department" name="department" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="position">职位 <span class="required">*</span></label>
+                            <input type="text" id="position" name="position" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">联系电话 <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">电子邮箱</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="hire_date">入职日期 <span class="required">*</span></label>
+                            <input type="date" id="hire_date" name="hire_date" required>
+                        </div>
+                    </div>
+                    
+                    <div class="button-group">
+                        <button type="submit" class="submit-btn">保存</button>
+                        <button type="button" class="reset-btn" onclick="location.reload()">取消</button>
+                    </div>
+                    
+                    <div id="message" class="message"></div>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+    <script src="update.js"></script>
+</body>
+</html>
